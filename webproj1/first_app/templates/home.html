@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>User:{{user}}</h1>
+    <h1>User:{{user.username}}</h1>
+    <h1>Is authorized:{{user.is_authenticated}}</h1>
+    <h1>Is superuser:{{user.is_superuser}}</h1>
+    {% if user.is_authenticated%}
+          authorized user:{{user.username}}
+    {%else%}
+        Non-Authorized user!
+    {%endif%}
+</body>
+</html>
